@@ -16,17 +16,17 @@ Bind it to any Decimal column (`0` → empty, `1` → full, `0.5` → half) and 
 ### Compact mode
 Tiny inline sphere — replaces a regular % field in any row.
 
-![Compact mode](docs/screenshots/compact.png)
+![Compact mode](docs/screenshots/compact.gif)
 
 ### Medium mode
 Half-section card with a meta strip (Due / Owner / Status).
 
-![Medium mode](docs/screenshots/medium.png)
+![Medium mode](docs/screenshots/medium.gif)
 
 ### Hero mode
 Full-width section showcase with the meta strip below.
 
-![Hero mode](docs/screenshots/hero.png)
+![Hero mode](docs/screenshots/hero.gif)
 
 ---
 
