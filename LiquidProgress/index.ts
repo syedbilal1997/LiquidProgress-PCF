@@ -1,3 +1,15 @@
+/*!
+ * LiquidProgress — an animated liquid-filled sphere PCF control
+ * for model-driven Power Apps.
+ *
+ * Bind any Decimal column where 0 = 0% and 1 = 100% (e.g. 0.5 = 50%).
+ * The sphere fills up with green liquid; the wave subtly animates.
+ *
+ * Repo:    https://github.com/syedbilal1997/LiquidProgress
+ * Author:  Syed Bilal Ahmed  <https://syedbilal365.hashnode.dev>
+ * License: MIT
+ */
+
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
 type SizeMode = "compact" | "medium" | "hero";

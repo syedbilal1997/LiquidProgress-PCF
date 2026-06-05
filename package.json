@@ -1,7 +1,32 @@
 {
-  "name": "pcf-project",
-  "version": "1.0.0",
-  "description": "Project containing your PowerApps Component Framework (PCF) control.",
+  "name": "liquid-progress-pcf",
+  "version": "1.4.0",
+  "description": "LiquidProgress — an animated liquid-filled sphere PCF control for model-driven Power Apps. Bind any Decimal column (0..1) and your form gets a living visual.",
+  "author": {
+    "name": "Syed Bilal Ahmed",
+    "url": "https://syedbilal365.hashnode.dev"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syedbilal1997/LiquidProgress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/syedbilal1997/LiquidProgress/issues"
+  },
+  "homepage": "https://github.com/syedbilal1997/LiquidProgress#readme",
+  "keywords": [
+    "pcf",
+    "powerapps",
+    "power-platform",
+    "dataverse",
+    "model-driven",
+    "progress",
+    "percentage",
+    "liquid",
+    "animated",
+    "field-control"
+  ],
   "scripts": {
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",
@@ -12,8 +37,7 @@
     "start:watch": "pcf-scripts start watch",
     "refreshTypes": "pcf-scripts refreshTypes"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.25.1",
     "@microsoft/eslint-plugin-power-apps": "^0.2.51",
