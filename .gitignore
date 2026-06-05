@@ -1,0 +1,20 @@
+# PCF build output (controlsRoot layout: out/ is at repo root)
+out/
+LiquidProgress/generated/
+
+# MSBuild / NuGet artefacts (root pcfproj + solution)
+obj/
+bin/
+Solution/bin/
+Solution/obj/
+
+# Release artefacts — built locally, attached to GitHub Releases instead of committed
+release/
+
+# Node
+node_modules/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

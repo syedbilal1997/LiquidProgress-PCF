@@ -1,0 +1,172 @@
+/* =========================================================
+   LiquidProgress — animated liquid-filled sphere PCF
+   Dependency-free; pure SVG + CSS.
+   ========================================================= */
+
+.lp-root {
+  --lp-accent: #1a5c3a;
+  --lp-accent-light: #3aa572;
+  --lp-bg: #f3f6f4;
+  --lp-border: #e1e5e2;
+  --lp-ink: #242424;
+  --lp-sub: #6b6b6b;
+  --lp-line: #e3e1df;
+  --lp-ok: #107c41;
+  --lp-down: #c50f1f;
+  --lp-flat: #a19f9d;
+  font-family: 'Segoe UI', system-ui, Arial, sans-serif;
+  color: var(--lp-ink);
+  box-sizing: border-box;
+}
+.lp-root *, .lp-root *::before, .lp-root *::after { box-sizing: border-box; }
+
+/* ---------- the sphere itself ---------- */
+.lp-sphere {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--lp-bg);
+  border: 2px solid var(--lp-border);
+  box-shadow: inset 0 0 14px rgba(0, 0, 0, .07);
+  flex-shrink: 0;
+}
+.lp-wave {
+  position: absolute;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  border-radius: 43%;
+  background: linear-gradient(180deg, var(--lp-accent-light) 0%, var(--lp-accent) 90%);
+  animation: lp-spin 7s linear infinite;
+  /* top is set inline per render so 0..1 maps to position */
+  will-change: transform;
+}
+.lp-wave--b {
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--lp-accent-light) 55%, transparent) 0%,
+    color-mix(in srgb, var(--lp-accent) 55%, transparent) 90%);
+  animation: lp-spin 11s linear infinite reverse;
+}
+@keyframes lp-spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+
+.lp-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  z-index: 2;
+  line-height: 1;
+  pointer-events: none;
+}
+.lp-label .lp-pct { font-variant-numeric: tabular-nums; }
+.lp-label .lp-sub { font-weight: 700; opacity: .9; }
+
+/* When the sphere is empty (0%) keep the label readable */
+.lp-sphere.is-empty .lp-label {
+  color: var(--lp-ink);
+  text-shadow: none;
+}
+
+/* ---------- COMPACT mode (inline) ---------- */
+.lp-compact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lp-compact .lp-sphere { width: 52px; height: 52px; }
+.lp-compact .lp-pct { font-size: 13px; }
+.lp-compact .lp-sub { display: none; }
+.lp-compact .lp-num { font-size: 14px; font-weight: 700; color: var(--lp-ink); font-variant-numeric: tabular-nums; }
+.lp-compact .lp-due { font-size: 11.5px; color: var(--lp-sub); }
+
+/* ---------- MEDIUM mode (half section) ---------- */
+.lp-medium {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid var(--lp-line);
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+  min-height: 140px;
+}
+.lp-medium .lp-sphere { width: 120px; height: 120px; }
+.lp-medium .lp-pct { font-size: 26px; }
+.lp-medium .lp-sub { font-size: 9px; letter-spacing: 1px; margin-top: 3px; }
+.lp-medium .lp-meta { flex: 1; min-width: 0; }
+.lp-medium .lp-meta-h {
+  font-size: 12px; font-weight: 700; color: var(--lp-accent);
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px;
+}
+.lp-medium .lp-meta-row {
+  display: flex; justify-content: space-between;
+  font-size: 12px; color: var(--lp-sub); padding: 3px 0;
+}
+.lp-medium .lp-meta-row b { color: var(--lp-ink); }
+
+/* ---------- HERO mode (full section) ---------- */
+.lp-hero {
+  background: #fff;
+  border: 1px solid var(--lp-line);
+  border-radius: 10px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+.lp-hero .lp-title {
+  font-size: 12px; font-weight: 700; color: var(--lp-accent);
+  text-transform: uppercase; letter-spacing: .5px;
+}
+.lp-hero .lp-sphere { width: 200px; height: 200px; }
+.lp-hero .lp-pct { font-size: 44px; }
+.lp-hero .lp-sub { font-size: 11px; letter-spacing: 1.5px; margin-top: 4px; }
+.lp-hero .lp-meta-strip {
+  display: flex; justify-content: space-around; width: 100%;
+  margin-top: 12px; padding-top: 12px;
+  border-top: 1px dashed var(--lp-line);
+  font-size: 12px;
+}
+.lp-hero .lp-meta-strip .k { color: var(--lp-sub); text-align: center; }
+.lp-hero .lp-meta-strip .v {
+  font-weight: 700; color: var(--lp-ink);
+  font-size: 13.5px; margin-top: 2px; text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- owner ---------- */
+.lp-owner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.lp-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--lp-accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.lp-hero .lp-meta-strip .lp-owner { justify-content: center; }
+.lp-hero .lp-meta-strip .lp-avatar { width: 24px; height: 24px; font-size: 11px; }
+
+/* ---------- trend / status colours ----------
+   !important so they beat the more-specific .lp-medium / .lp-hero
+   layout rules above. The whole point of a trend chip is its colour. */
+.lp-up    { color: var(--lp-ok)   !important; }
+.lp-down  { color: var(--lp-down) !important; }
+.lp-flat  { color: var(--lp-flat) !important; }

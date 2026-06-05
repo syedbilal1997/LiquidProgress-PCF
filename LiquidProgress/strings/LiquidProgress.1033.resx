@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+
+  <data name="LiquidProgress_DisplayName" xml:space="preserve"><value>Liquid Progress</value></data>
+  <data name="LiquidProgress_Description" xml:space="preserve"><value>An animated liquid-filled sphere that visualises any decimal % field (0..1). Drop on any decimal column — 0 renders empty, 1 renders full, 0.5 renders half.</value></data>
+
+  <data name="Value_DisplayName" xml:space="preserve"><value>Value (0..1)</value></data>
+  <data name="Value_Description" xml:space="preserve"><value>The decimal field to visualise. 0 = 0%, 1 = 100%, 0.5 = 50%.</value></data>
+
+  <data name="DisplaySize_DisplayName" xml:space="preserve"><value>Display size</value></data>
+  <data name="DisplaySize_Description" xml:space="preserve"><value>Auto fits the available width. Compact, Medium and Hero force a specific layout.</value></data>
+  <data name="DisplaySize_Auto" xml:space="preserve"><value>Auto (fits available space)</value></data>
+  <data name="DisplaySize_Auto_Desc" xml:space="preserve"><value>Auto-picks Compact / Medium / Hero based on allocated width.</value></data>
+  <data name="DisplaySize_Compact" xml:space="preserve"><value>Compact (inline)</value></data>
+  <data name="DisplaySize_Compact_Desc" xml:space="preserve"><value>Small sphere with the % value and trend chip next to it. Fits in a normal field row.</value></data>
+  <data name="DisplaySize_Medium" xml:space="preserve"><value>Medium (half section)</value></data>
+  <data name="DisplaySize_Medium_Desc" xml:space="preserve"><value>Medium sphere with a meta strip (target / trend / status) beside it.</value></data>
+  <data name="DisplaySize_Hero" xml:space="preserve"><value>Hero (full section)</value></data>
+  <data name="DisplaySize_Hero_Desc" xml:space="preserve"><value>Large hero sphere with the meta strip below. Best in a 1-column section.</value></data>
+
+  <data name="Label_DisplayName" xml:space="preserve"><value>Label</value></data>
+  <data name="Label_Description" xml:space="preserve"><value>Optional label shown under or inside the sphere (e.g. "EXECUTION", "Complete").</value></data>
+
+  <data name="AccentColor_DisplayName" xml:space="preserve"><value>Accent colour (hex)</value></data>
+  <data name="AccentColor_Description" xml:space="preserve"><value>Optional hex colour for the liquid (e.g. #1a5c3a). Defaults to a green gradient.</value></data>
+
+  <data name="DueDate_DisplayName" xml:space="preserve"><value>Due date (column)</value></data>
+  <data name="DueDate_Description" xml:space="preserve"><value>Optional Date column. Renders smart text like "Due 30 Sep", "in 23 days" or "Overdue by 5 days" in the meta strip.</value></data>
+
+  <data name="Owner_DisplayName" xml:space="preserve"><value>Owner (lookup column)</value></data>
+  <data name="Owner_Description" xml:space="preserve"><value>Optional Lookup column (typically the user / owner field). The lookup's display name is shown with a small initials avatar.</value></data>
+
+  <data name="StatusChoice_DisplayName" xml:space="preserve"><value>Status (Choice or Choices column)</value></data>
+  <data name="StatusChoice_Description" xml:space="preserve"><value>Optional Choice or Choices (multi) column. If bound, the option label(s) and Dataverse-defined colour are used automatically — overrides Status text. For Choices, selected labels are joined with ", " and the first option's colour is applied.</value></data>
+
+  <data name="StatusText_DisplayName" xml:space="preserve"><value>Status text (fallback)</value></data>
+  <data name="StatusText_Description" xml:space="preserve"><value>Optional plain status text shown in the meta strip — only used if Status (choice column) is not bound.</value></data>
+</root>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="SyedBilalAhmed"
+           constructor="LiquidProgress"
+           version="1.4.0"
+           display-name-key="LiquidProgress_DisplayName"
+           description-key="LiquidProgress_Description"
+           control-type="standard">
+
+    <external-service-usage enabled="false" />
+
+    <!-- BOUND: decimal field where 0 = 0% and 1 = 100% (e.g. 0.5 = 50%) -->
+    <property name="value"
+              display-name-key="Value_DisplayName"
+              description-key="Value_Description"
+              of-type="Decimal"
+              usage="bound"
+              required="true" />
+
+    <!-- Display size: maker chooses how the control renders -->
+    <property name="displaySize"
+              display-name-key="DisplaySize_DisplayName"
+              description-key="DisplaySize_Description"
+              of-type="Enum"
+              usage="input"
+              required="false"
+              default-value="medium">
+      <value name="auto"    display-name-key="DisplaySize_Auto"    description-key="DisplaySize_Auto_Desc">auto</value>
+      <value name="compact" display-name-key="DisplaySize_Compact" description-key="DisplaySize_Compact_Desc">compact</value>
+      <value name="medium"  display-name-key="DisplaySize_Medium"  description-key="DisplaySize_Medium_Desc">medium</value>
+      <value name="hero"    display-name-key="DisplaySize_Hero"    description-key="DisplaySize_Hero_Desc">hero</value>
+    </property>
+
+    <!-- Optional label shown under/inside the sphere -->
+    <property name="label"
+              display-name-key="Label_DisplayName"
+              description-key="Label_Description"
+              of-type="SingleLine.Text"
+              usage="input"
+              required="false"
+              default-value="" />
+
+    <!-- Optional accent colour (hex), overrides the default green -->
+    <property name="accentColor"
+              display-name-key="AccentColor_DisplayName"
+              description-key="AccentColor_Description"
+              of-type="SingleLine.Text"
+              usage="input"
+              required="false"
+              default-value="" />
+
+    <!-- Optional Date column. If bound, renders as "Due 30 Sep",
+         "in 23 days" or "Overdue by 5 days" alongside the sphere. -->
+    <type-group name="dateTypes">
+      <type>DateAndTime.DateOnly</type>
+      <type>DateAndTime.DateAndTime</type>
+    </type-group>
+    <property name="dueDate"
+              display-name-key="DueDate_DisplayName"
+              description-key="DueDate_Description"
+              of-type-group="dateTypes"
+              usage="bound"
+              required="false" />
+
+    <!-- Optional Lookup column for the owner / assigned user. Renders
+         the lookup's display name with a small initials avatar. -->
+    <property name="owner"
+              display-name-key="Owner_DisplayName"
+              description-key="Owner_Description"
+              of-type="Lookup.Simple"
+              usage="bound"
+              required="false" />
+
+    <!-- Optional Choice OR Choices (multi) column. If bound and has a
+         value, the option's Dataverse-defined colour is used automatically.
+         For Choices, all selected labels are joined with ", " and the
+         first option's colour is applied. Overrides StatusText. -->
+    <type-group name="statusTypes">
+      <type>OptionSet</type>
+      <type>MultiSelectOptionSet</type>
+    </type-group>
+    <property name="statusChoice"
+              display-name-key="StatusChoice_DisplayName"
+              description-key="StatusChoice_Description"
+              of-type-group="statusTypes"
+              usage="bound"
+              required="false" />
+
+    <!-- Optional plain status text — used only if StatusChoice is not bound. -->
+    <property name="statusText"
+              display-name-key="StatusText_DisplayName"
+              description-key="StatusText_Description"
+              of-type="SingleLine.Text"
+              usage="input"
+              required="false"
+              default-value="" />
+
+    <resources>
+      <code path="index.ts" order="1" />
+      <css path="css/LiquidProgress.css" order="1" />
+      <resx path="strings/LiquidProgress.1033.resx" version="1.0.0" />
+    </resources>
+
+  </control>
+</manifest>
