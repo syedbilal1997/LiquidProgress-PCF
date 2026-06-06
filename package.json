@@ -9,12 +9,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/syedbilal1997/LiquidProgress.git"
+    "url": "https://github.com/syedbilal1997/LiquidProgress-PCF.git"
   },
   "bugs": {
-    "url": "https://github.com/syedbilal1997/LiquidProgress/issues"
+    "url": "https://github.com/syedbilal1997/LiquidProgress-PCF/issues"
   },
-  "homepage": "https://github.com/syedbilal1997/LiquidProgress#readme",
+  "homepage": "https://github.com/syedbilal1997/LiquidProgress-PCF#readme",
   "keywords": [
     "pcf",
     "powerapps",

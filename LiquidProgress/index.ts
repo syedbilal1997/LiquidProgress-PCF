@@ -5,7 +5,7 @@
  * Bind any Decimal column where 0 = 0% and 1 = 100% (e.g. 0.5 = 50%).
  * The sphere fills up with green liquid; the wave subtly animates.
  *
- * Repo:    https://github.com/syedbilal1997/LiquidProgress
+ * Repo:    https://github.com/syedbilal1997/LiquidProgress-PCF
  * Author:  Syed Bilal Ahmed  <https://syedbilal365.hashnode.dev>
  * License: MIT
  */

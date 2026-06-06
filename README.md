@@ -2,7 +2,7 @@
 
 > An animated liquid-filled sphere PCF control for model-driven Power Apps. Bind any Decimal column where `0` = 0% and `1` = 100%, and your form gets a living visual instead of a plain number.
 
-[![Version](https://img.shields.io/github/v/release/syedbilal1997/LiquidProgress?label=release)](https://github.com/syedbilal1997/LiquidProgress/releases)
+[![Version](https://img.shields.io/github/v/release/syedbilal1997/LiquidProgress-PCF?label=release)](https://github.com/syedbilal1997/LiquidProgress-PCF/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Power Platform](https://img.shields.io/badge/Power%20Platform-PCF-742774?logo=microsoft)](https://learn.microsoft.com/power-apps/developer/component-framework)
 
