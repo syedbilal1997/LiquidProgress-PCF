@@ -18,6 +18,16 @@ Perfect for **execution %, progress %, capacity, utilisation, attendance, satisf
 
 ## See it in action
 
+### 🎥 Live demo (Medium mode)
+
+A real recording of the control running on a model-driven form — sphere filling, status colour pulled from a Dataverse Choice column, due date rendered, owner avatar, the lot.
+
+https://github.com/syedbilal1997/LiquidProgress-PCF/raw/main/docs/screenshots/demo-medium.mp4
+
+> If the video doesn't auto-render on your client, [download or open it directly here](docs/screenshots/demo-medium.mp4).
+
+---
+
 ### Compact mode
 Drop it on a normal field row in place of a boring percentage.
 
