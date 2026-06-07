@@ -22,9 +22,7 @@ Perfect for **execution %, progress %, capacity, utilisation, attendance, satisf
 
 A real recording of the control running on a model-driven form — sphere filling, status colour pulled from a Dataverse Choice column, due date rendered, owner avatar, the lot.
 
-<video src="https://github.com/syedbilal1997/LiquidProgress-PCF/raw/main/docs/screenshots/demo-medium.mp4" controls muted playsinline width="640" style="max-width:100%"></video>
-
-> Can't see the player above? [Download or open the MP4 directly](docs/screenshots/demo-medium.mp4).
+https://github.com/user-attachments/assets/1ba43fb2-c29f-46fd-8d52-e328f50114c7
 
 ---
 
